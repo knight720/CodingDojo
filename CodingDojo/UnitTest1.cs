@@ -5,12 +5,17 @@ namespace CodingDojo
     [TestClass]
     public class FizzBuzzTest
     {
+            FizzBuzz fizzBuzz = new FizzBuzz();
         [TestMethod]
         public void three_is_fizz()
         {
-            FizzBuzz fizzBuzz = new FizzBuzz();
-            var result = fizzBuzz.GetResult(3);
-            Assert.AreEqual("Fizz", result);
+            AssertResut("Fizz",3);
+        }
+
+        private void AssertResut(string exptct, int value)
+        {
+            var result = fizzBuzz.GetResult(value);
+            Assert.AreEqual(exptct, result);
         }
 
         [TestMethod]
