@@ -10,6 +10,10 @@ namespace CodingDojo
 
         internal string GetResult(int value)
         {
+            if (value % 3 == 0 && value % 5 == 0)
+            {
+                return "FizzBuzz";
+            }
             if (value % 5 == 0)
             {
                 return "Buzz";
