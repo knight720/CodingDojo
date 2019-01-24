@@ -15,7 +15,13 @@ namespace CodingDojo
                 return "Buzz";
 
             }
-            return "Fizz";
+            if (value % 3 == 0)
+            {
+
+                return "Fizz";
+            }
+
+            return value.ToString();
         }
     }
 }
