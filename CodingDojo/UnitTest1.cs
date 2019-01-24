@@ -23,5 +23,11 @@ namespace CodingDojo
         {
             AssertResut("Buzz", 5);
         }
+        
+        [TestMethod]
+        public void nothing_is_value()
+        {
+            AssertResut("4", 4);
+        }
     }
 }
