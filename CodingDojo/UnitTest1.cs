@@ -5,11 +5,11 @@ namespace CodingDojo
     [TestClass]
     public class FizzBuzzTest
     {
-            FizzBuzz fizzBuzz = new FizzBuzz();
+        FizzBuzz fizzBuzz = new FizzBuzz();
         [TestMethod]
         public void three_is_fizz()
         {
-            AssertResut("Fizz",3);
+            AssertResut("Fizz", 3);
         }
 
         private void AssertResut(string exptct, int value)
@@ -21,9 +21,7 @@ namespace CodingDojo
         [TestMethod]
         public void five_is_buzz()
         {
-            FizzBuzz fizzBuzz = new FizzBuzz();
-            var result = fizzBuzz.GetResult(5);
-            Assert.AreEqual("Buzz", result);
+            AssertResut("Buzz", 5);
         }
     }
 }
