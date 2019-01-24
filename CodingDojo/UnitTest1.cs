@@ -29,5 +29,10 @@ namespace CodingDojo
         {
             AssertResut("4", 4);
         }
+        [TestMethod]
+        public void v195_is_fizzbuzz()
+        {
+            AssertResut("FizzBuzz", 195);
+        }
     }
 }
