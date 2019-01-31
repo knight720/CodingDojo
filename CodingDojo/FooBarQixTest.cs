@@ -9,13 +9,13 @@ namespace CodingDojo
         [TestMethod]
         public void One_Is_One()
         {
-            string result = fooBarQix.What(1);
-            Assert.AreEqual("1",result);
+            FooBarQixAssert("1",1);
         }
         
         [TestMethod]
         public void Three_Is_FooFoo()
         {
+            FooBarQixAssert("FooFoo",3);
         }
 
         public void FooBarQixAssert(string expected, int value)
