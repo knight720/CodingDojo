@@ -12,5 +12,13 @@ namespace CodingDojo
             string result = fooBarQix.What(1);
             Assert.AreEqual("1",result);
         }
+        
+        [TestMethod]
+        public void Three_Is_FooFoo()
+        {
+            FooBarQix fooBarQix = new FooBarQix();
+            string result = fooBarQix.What(3);
+            Assert.AreEqual("FooFoo",result);
+        }
     }
 }
