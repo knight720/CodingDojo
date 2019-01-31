@@ -16,12 +16,12 @@ namespace CodingDojo
         [TestMethod]
         public void Three_Is_FooFoo()
         {
-            string result = fooBarQix.What(3);
-            Assert.AreEqual("FooFoo",result);
         }
 
-        public void FooBarQixAssert(string expect, int value)
+        public void FooBarQixAssert(string expected, int value)
         {
+            string result = fooBarQix.What(value);
+            Assert.AreEqual(expected,result);
             
         }
     }
