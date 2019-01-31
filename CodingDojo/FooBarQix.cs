@@ -14,6 +14,10 @@ namespace CodingDojo
             {
                 return "FooFoo";
             }
+            if (value % 5 == 0 && value.ToString().Contains("5"))
+            {
+                return "BarBar";
+            }
             return value.ToString();
         }
     }

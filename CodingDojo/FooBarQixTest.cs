@@ -24,5 +24,12 @@ namespace CodingDojo
             Assert.AreEqual(expected,result);
             
         }
+        
+
+        [TestMethod]
+        public void five_Is_BarBar()
+        {
+            FooBarQixAssert("BarBar",5);
+        }
     }
 }
