@@ -1,18 +1,28 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CodingDojo
 {
     internal class FooBarQix
     {
+        Dictionary<int,string> _ruleDictionary = new Dictionary<int, string>()
+        {
+            {3,"FooFoo"},
+            {5,"BarBar"},
+            {7,"QixQix"},
+        };
         public FooBarQix()
         {
         }
 
         internal string What(int value)
         {
-            if (value % 3 == 0 && value.ToString().Contains("3"))
+            foreach (var ruleKey in _ruleDictionary.Keys)
             {
-                return "FooFoo";
+            if (value % ruleKey == 0 && value.ToString().Contains(ruleKey.ToString()))
+            {
+                return _ruleDictionary[ruleKey];
+            }
             }
             if (value % 5 == 0 && value.ToString().Contains("5"))
             {
