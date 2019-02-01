@@ -9,16 +9,16 @@ namespace CodingDojo
         [TestMethod]
         public void One_Is_One()
         {
-            FooBarQixAssert("1",1);
+            FooBarQixAssert(1, "1");
         }
         
         [TestMethod]
         public void Three_Is_FooFoo()
         {
-            FooBarQixAssert("FooFoo",3);
+            FooBarQixAssert(3, "FooFoo");
         }
 
-        public void FooBarQixAssert(string expected, int value)
+        public void FooBarQixAssert(int value, string expected)
         {
             string result = fooBarQix.What(value);
             Assert.AreEqual(expected,result);
@@ -29,27 +29,27 @@ namespace CodingDojo
         [TestMethod]
         public void five_Is_BarBar()
         {
-            FooBarQixAssert("BarBar",5);
+            FooBarQixAssert(5, "BarBar");
         }
         [TestMethod]
         public void Seven_Is_QixQix()
         {
-            FooBarQixAssert("QixQix",7);
+            FooBarQixAssert(7, "QixQix");
         }
         [TestMethod]
         public void Nine_Is_Foo()
         {
-            FooBarQixAssert("Foo",9);
+            FooBarQixAssert(9, "Foo");
         }
         [TestMethod]
         public void Ten_Is_Bar()
         {
-            FooBarQixAssert("Bar",10);
+            FooBarQixAssert(10, "Bar");
         }
         [TestMethod]
         public void Thirteen_Is_Foo()
         {
-            FooBarQixAssert("Foo",13);
+            FooBarQixAssert(13, "Foo");
         }
     }
 }
