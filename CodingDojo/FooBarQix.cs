@@ -24,9 +24,14 @@ namespace CodingDojo
                 {
                     result += _ruleDictionary[ruleKey];
                 }
-                if (value.ToString().Contains(ruleKey.ToString()))
+
+                foreach (var c in value.ToString())
                 {
-                    result += _ruleDictionary[ruleKey];
+                    if (c.ToString().Equals(ruleKey.ToString()))
+                    {
+                        result += _ruleDictionary[ruleKey];
+                    }
+
                 }
             }
 
