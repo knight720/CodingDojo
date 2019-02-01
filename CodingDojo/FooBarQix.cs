@@ -5,7 +5,7 @@ namespace CodingDojo
 {
     internal class FooBarQix
     {
-        Dictionary<int,string> _ruleDictionary = new Dictionary<int, string>()
+        Dictionary<int, string> _ruleDictionary = new Dictionary<int, string>()
         {
             {3,"FooFoo"},
             {5,"BarBar"},
@@ -19,18 +19,10 @@ namespace CodingDojo
         {
             foreach (var ruleKey in _ruleDictionary.Keys)
             {
-            if (value % ruleKey == 0 && value.ToString().Contains(ruleKey.ToString()))
-            {
-                return _ruleDictionary[ruleKey];
-            }
-            }
-            if (value % 5 == 0 && value.ToString().Contains("5"))
-            {
-                return "BarBar";
-            }
-            if (value % 7 == 0 && value.ToString().Contains("7"))
-            {
-                return "QixQix";
+                if (value % ruleKey == 0 && value.ToString().Contains(ruleKey.ToString()))
+                {
+                    return _ruleDictionary[ruleKey];
+                }
             }
             return value.ToString();
         }

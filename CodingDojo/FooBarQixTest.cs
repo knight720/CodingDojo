@@ -36,5 +36,10 @@ namespace CodingDojo
         {
             FooBarQixAssert("QixQix",7);
         }
+        [TestMethod]
+        public void Nine_Is_Foo()
+        {
+            FooBarQixAssert("Foo",9);
+        }
     }
 }
