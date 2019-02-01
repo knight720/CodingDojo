@@ -18,6 +18,10 @@ namespace CodingDojo
             {
                 return "BarBar";
             }
+            if (value % 7 == 0 && value.ToString().Contains("7"))
+            {
+                return "QixQix";
+            }
             return value.ToString();
         }
     }
