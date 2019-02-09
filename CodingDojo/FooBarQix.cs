@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CodingDojo
 {
@@ -18,6 +19,7 @@ namespace CodingDojo
         internal string What(int value)
         {
             string result = string.Empty;
+
             foreach (var ruleKey in _ruleDictionary.Keys)
             {
                 if (value % ruleKey == 0)
@@ -25,9 +27,14 @@ namespace CodingDojo
                     result += _ruleDictionary[ruleKey];
                 }
 
-                foreach (var c in value.ToString())
+            }
+            foreach (var c in value.ToString())
+            {
+                foreach (var ruleKey in _ruleDictionary.Keys)
                 {
-                    if (c.ToString().Equals(ruleKey.ToString()))
+
+                    int v = Convert.ToInt32(c.ToString());
+                    if (v == ruleKey)
                     {
                         result += _ruleDictionary[ruleKey];
                     }
