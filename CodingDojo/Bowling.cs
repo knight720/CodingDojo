@@ -12,7 +12,12 @@ namespace CodingDojo
             {
                 return 300;
             }
-            return 90;
+            var nineCount = frameArray.ToList().Count(i => i.Contains("9-"));
+            if (nineCount == 10)
+            {
+                return 90;
+            }
+            return 150;
         }
     }
 }
