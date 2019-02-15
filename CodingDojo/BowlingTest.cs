@@ -6,7 +6,7 @@ namespace CodingDojo
     public class BowlingTest
     {
         [TestMethod]
-        public void TenXIs300()
+        public void TenStrikeIs300()
         {
             Bowling bowling = new Bowling();
             int actual = bowling.GetScore("X,X,X,X,X,X,X,X,X,XXX");
@@ -19,6 +19,14 @@ namespace CodingDojo
             Bowling bowling = new Bowling();
             int actual = bowling.GetScore("9-,9-,9-,9-,9-,9-,9-,9-,9-,9-");
             Assert.AreEqual(90,actual);
+        }
+        
+        [TestMethod]
+        public void Ten5SpareIs150()
+        {
+            Bowling bowling = new Bowling();
+            int actual = bowling.GetScore("5/,5/,5/,5/,5/,5/,5/,5/,5/,5/5");
+            Assert.AreEqual(150,actual);
         }
     }
 }
