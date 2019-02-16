@@ -4,7 +4,7 @@ namespace CodingDojo
 {
     public class Bowling
     {
-        public int GetScore(string frame)
+        public int? GetScore(string frame)
         {
             var frameArray = frame.Split(',');
             var xCount = frameArray.ToList().Count(i => i.Contains("X"));
@@ -17,7 +17,12 @@ namespace CodingDojo
             {
                 return 90;
             }
-            return 150;
+            var fiveSpareCount = frameArray.ToList().Count(i => i.Contains("5/"));
+            if (fiveSpareCount == 10)
+            {
+                return 150;
+            }
+            return null;
         }
     }
 }

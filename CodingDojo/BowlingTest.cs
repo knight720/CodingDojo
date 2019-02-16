@@ -9,7 +9,7 @@ namespace CodingDojo
         public void TenStrikeIs300()
         {
             Bowling bowling = new Bowling();
-            int actual = bowling.GetScore("X,X,X,X,X,X,X,X,X,XXX");
+            int? actual = bowling.GetScore("X,X,X,X,X,X,X,X,X,XXX");
             Assert.AreEqual(300,actual);
         }
         
@@ -17,7 +17,7 @@ namespace CodingDojo
         public void Ten9MissIs90()
         {
             Bowling bowling = new Bowling();
-            int actual = bowling.GetScore("9-,9-,9-,9-,9-,9-,9-,9-,9-,9-");
+            int? actual = bowling.GetScore("9-,9-,9-,9-,9-,9-,9-,9-,9-,9-");
             Assert.AreEqual(90,actual);
         }
         
@@ -25,8 +25,16 @@ namespace CodingDojo
         public void Ten5SpareIs150()
         {
             Bowling bowling = new Bowling();
-            int actual = bowling.GetScore("5/,5/,5/,5/,5/,5/,5/,5/,5/,5/5");
+            int? actual = bowling.GetScore("5/,5/,5/,5/,5/,5/,5/,5/,5/,5/5");
             Assert.AreEqual(150,actual);
+        }
+        
+        [TestMethod]
+        public void OneStrikeIsEmpty()
+        {
+            Bowling bowling = new Bowling();
+            int? actual = bowling.GetScore("X");
+            Assert.AreEqual(null,actual);
         }
     }
 }
