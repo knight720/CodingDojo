@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace CodingDojo
 {
     [TestClass]
-    public class UnitTest1
+    public class PokerHandsTest
     {
         [TestMethod]
         public void TestMethod1()
