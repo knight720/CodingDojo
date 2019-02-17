@@ -9,7 +9,7 @@ namespace CodingDojo
         [TestMethod]
         public void TenStrikeIs300()
         {
-            this.AssertResult("X,X,X,X,X,X,X,X,X,XXX", 300);
+            this.AssertResult("X X X X X X X X X X X X", 300);
         }
         
         [TestMethod]
