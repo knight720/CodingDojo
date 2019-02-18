@@ -15,13 +15,13 @@ namespace CodingDojo
         [TestMethod]
         public void Ten9MissIs90()
         {
-            this.AssertResult("9-,9-,9-,9-,9-,9-,9-,9-,9-,9-",90);
+            this.AssertResult("9- 9- 9- 9- 9- 9- 9- 9- 9- 9-", 90);
         }
         
         [TestMethod]
         public void Ten5SpareIs150()
         {
-            this.AssertResult("5/,5/,5/,5/,5/,5/,5/,5/,5/,5/5", 150);
+            this.AssertResult("5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/5", 150);
         }
         
         [TestMethod]

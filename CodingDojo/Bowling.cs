@@ -6,9 +6,9 @@ namespace CodingDojo
     {
         public int? GetScore(string frame)
         {
-            var frameArray = frame.Split(',');
+            var frameArray = frame.Split(' ');
             var xCount = frameArray.ToList().Count(i => i.Contains("X"));
-            if (xCount == 10)
+            if (xCount == 12)
             {
                 return 300;
             }
